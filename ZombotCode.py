@@ -45,7 +45,7 @@ async def lista(ctx: discord.Interaction):
 @tree.command(description='Exibe todos os tutoriais sobre um assunto')
 async def tutorial(ctx: discord.Interaction, subject: str):
 
-    if subject.lower() in ['construção','Construção', 'construcao', 'construçao', 'construction']:
+    if subject.lower() in ['construção','Construção', 'construcao', 'construçao', 'construction', 'Construcao', 'Construçao', 'Construction']:
         Carpintaria = Embed(title="Manual Completo de Carpintaria", url="https://www.youtube.com/watch?v=FaCQuyXbp1I", description="**Aprenda e desenvolva seu conhecimento sobre carpintaria!**")
         Carpintaria.set_thumbnail(url="https://projectzomboid.com/blog/content/uploads/2014/12/108600_screenshots_2014-11-25_00001.jpg")
         Metalurgia = Embed(title="Manual completo de Metalurgia", url="https://www.youtube.com/watch?v=zTyzEx1ews8", description="**Aprenda como subir de nivel em metalurgia e como fazer portas, janelas, caixas de metal e muito mais!**")
@@ -57,7 +57,7 @@ async def tutorial(ctx: discord.Interaction, subject: str):
         for link in links:
             await ctx.followup.send(embed=link)
 
-    if subject.lower() in ['eletric','elétrica', 'engenharia', 'eletrica', 'engineering', 'engineer']:
+    if subject.lower() in ['eletric','elétrica', 'engenharia', 'eletrica', 'engineering', 'Engineer','Eletric','Elétrica', 'Engenharia', 'Eletrica', 'Engineering', 'Engineer']:
         Elétrica = Embed(title="Manual Completo Elétrica e Engenharia", url="https://www.youtube.com/watch?v=o-O-Z05dRCM", description="**Aprenda sobre Elétrica e Engenharia!**")
         Elétrica.set_thumbnail(url="https://th.bing.com/th/id/OIG.uvlG2ojnRJE_VCJX8J7X?pid=ImgGn")
         links = [Elétrica]
@@ -76,7 +76,7 @@ async def tutorial(ctx: discord.Interaction, subject: str):
         for link in links:
             await ctx.followup.send(embed=link)
 
-    if subject.lower() in ['health','primeiros socorros', 'cura','saude','saúde','medicina']:
+    if subject.lower() in ['health','primeiros socorros', 'cura','saude','saúde','medicina','Health','Primeiros Socorros', 'Cura','Saude','Saúde','Medicina']:
         Medicine = Embed(title="Manual Completo sobre Medicina", url="https://www.youtube.com/watch?v=_ojrSjjncJU", description="**Aumente seu conhecimento sobre Medicina!**")
         Medicine.set_thumbnail(url="https://th.bing.com/th/id/OIG.NdCVJs7wOC0PN1DFHEfr?pid=ImgGn")
         Firstaid = Embed(title="Manual Completo sobre Primeiros Socorros", url="https://www.youtube.com/watch?v=Xv5e5PZNM5U", description="**Aprenda como se fazer Primeiros Socorros!**")
@@ -88,7 +88,7 @@ async def tutorial(ctx: discord.Interaction, subject: str):
         for link in links:
             await ctx.followup.send(embed=link)
 
-    if subject.lower() in ['farming','agricultura','agro','agronomia']:
+    if subject.lower() in ['farming','agricultura','agro','agronomia','Farming','Agricultura','Agro','Agronomia']:
         Farming = Embed(title="Manual Completo sobre Agronomia", url="https://www.youtube.com/watch?v=niU9DxZckWo", description="**Desenvolva seu conhecimento sobre Farming!**")
         Farming.set_thumbnail(url="https://th.bing.com/th/id/OIG.nM8YlEKsr7ByoKVp7abT?pid=ImgGn")
         Fertilizer = Embed(title="Manual Completo sobre Adubagem", url="https://www.youtube.com/watch?v=zAuQ3m3ylWQ", description="**Saiba como usar merda corretamente!**")
@@ -111,7 +111,7 @@ async def tutorial(ctx: discord.Interaction, subject: str):
 
         for link in links:
             await ctx.followup.send(embed=link)
-    if subject.lower() in ['mechanic','mecanica']:
+    if subject.lower() in ['mechanic','mecanica','Mecânica','Mecanica']:
         CarMechanic = Embed(title="Manual Completo sobre Mecânica", url="https://www.youtube.com/watch?v=_p50RgEbwIE", description="**Saiba como fazer um projetinho no seu carro dos sonhos!**")
         CarMechanic.set_thumbnail(url="https://th.bing.com/th/id/OIG.TjCZfn9W4irFDo9ER20f?pid=ImgGn")
         Mechanic = Embed(title="Manual Completo sobre Mecânica", url="https://www.youtube.com/watch?v=T_KVvJxjE0k", description="**Tudo o que você precisa saber sobre Mecânica!**")
@@ -125,6 +125,15 @@ async def tutorial(ctx: discord.Interaction, subject: str):
 
     else:
         await ctx.response.send_message(f'Desculpe, eu não tenho tutoriais sobre o assunto "{subject}".')
+
+@tree.command(description='Envia um link para o mapa do Project Zomboid')
+async def mapa(ctx):
+    description = f'Mapa interativo de Project Zomboid!'
+    
+    embed = discord.Embed(description=description, url="https://map.projectzomboid.com", title= "Mapa Project Zomboid")
+    embed.set_image(url="https://th.bing.com/th/id/OIG..tC0wbUyWBjmHIRUHHbN?pid=ImgGn")
+
+    await ctx.response.send_message(embed=embed)
 
 
 @tree.command()
@@ -165,5 +174,3 @@ async def on_error(interaction: discord.Interaction, error: commands.CommandErro
         await interaction.response.send_message("Não tenho permissão pra usar esse comando!")
 
 aclient.run(token)
-
-

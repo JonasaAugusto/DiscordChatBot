@@ -162,7 +162,7 @@ async def on_error(interaction: discord.Interaction, error: commands.CommandErro
     if isinstance(error, commands.MissingPermissions):
         await interaction.response.send_message("Você não tem permissão pra usar esse comando.", ephemeral=True)
     elif isinstance(error, commands.BotMissingPermissions):
-        await interaction.response.send_message("Não tenho permissão pra usar esse comando.")
+        await interaction.response.send_message("Não tenho permissão pra usar esse comando!")
 
 aclient.run(token)
 

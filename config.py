@@ -1,5 +1,0 @@
-token = 'MTA5ODI2OTMzNzE5MTcyMzA1OA.GdEtjq.VvV1ZAWU260jiQjRT2s08Syh0BuYwysIp_UHpo'
-host = 'localhost'
-database = 'botdb'
-user = 'root'
-password = ''

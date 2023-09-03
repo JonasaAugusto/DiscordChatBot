@@ -14,4 +14,4 @@ Além disso, o bot oferece os seguintes comandos:
 
 /map: Este comando te envia um link direcionando você à um mapa interativo do jogo, podendo ver o máximo de detalhes possíveis
 
-Além disso, o Bot do Projeto Zomboid oferece suporte completo para bancos de dados, adaptando-se às necessidades do servidor. Este bot está em constante desenvolvimento, recebendo atualizações regulares e novas funcionalidades para melhorar a experiência dos jogadores e manter o servidor dinâmico.
+Além disso, Zombot oferece suporte completo para bancos de dados, adaptando-se às necessidades do servidor. Este bot está em constante desenvolvimento, recebendo atualizações regulares e novas funcionalidades para melhorar a experiência dos jogadores e manter o servidor dinâmico.
